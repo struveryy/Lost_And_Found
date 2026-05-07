@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindIt — College Lost & Found</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">🔍</div>
+    FindIt
+  </a>
+
+  <div class="nav-right">
+    <button class="btn btn-ghost" onclick="openReportModal('found')">
+      ✅ I Found Something
+    </button>
+
+    <button class="btn btn-primary" onclick="openReportModal('lost')">
+      🔴 Report Lost
+    </button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🎓 GreenLeaf University</div>
+
+  <h1>
+    Lost something on <br>
+    <em>campus?</em>
+  </h1>
+
+  <p>
+    Smart matching system to connect students with their lost belongings.
+  </p>
+
+  <div class="hero-actions">
+    <button class="btn btn-hero-primary" onclick="openReportModal('lost')">
+      🔴 Report Lost Item
+    </button>
+
+    <button class="btn btn-hero-ghost" onclick="openReportModal('found')">
+      ✅ Post Found Item
+    </button>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="section-header">
+    <div class="section-title">
+      Active <span>Listings</span>
+    </div>
+  </div>
+
+  <div class="items-grid" id="items-grid"></div>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div class="modal-overlay" id="report-modal">
+
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2 id="modal-title">Report Item</h2>
+
+      <button class="modal-close" onclick="closeModal()">
+        ✕
+      </button>
+    </div>
+
+    <div class="modal-body">
+
+      <input class="form-input" id="item-name" placeholder="Item Name">
+
+      <textarea class="form-textarea" id="item-desc" placeholder="Description"></textarea>
+
+      <button class="btn btn-primary" onclick="submitItem()">
+        Submit
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
