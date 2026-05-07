@@ -25,8 +25,3 @@ Designed to create a smarter and safer campus environment by helping students re
 👨‍💻 Developed By
 Suhani
 
-🌐 Live Demo
-Add your GitHub Pages link here
-
-⭐ Star this project on GitHub if you like it!
-
